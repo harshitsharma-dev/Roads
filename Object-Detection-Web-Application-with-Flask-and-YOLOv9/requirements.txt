@@ -1,0 +1,9 @@
+Flask
+opencv-python
+torch
+tensorflow
+werkzeug
+ultralytics
+pillow
+argparse
+gunicorn
