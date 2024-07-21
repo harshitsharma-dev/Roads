@@ -170,19 +170,19 @@
                     tt.services.calculateRoute(routeOptions).then(function(routeData) {
                       document.getElementById('distance').innerHTML = 'Total Distance ' + routeData.routes[0].summary.lengthInMeters + ' mts';
 
-                      const value = routeData.routes[0].summary.lengthInMeters;
-                      fetch('/send_data', {
-                          method: 'POST',
-                          headers: {
-                              'Content-Type': 'application/json'
-                          },
-                          body: JSON.stringify({ value: value })
-                      })
-                      .then(response => response.json())
-                      .then(data => console.log('Success:', data))
-                      .catch((error) => {
-                          console.error('Error:', error);
-                      });
+                      // const value = routeData.routes[0].summary.lengthInMeters;
+                      // fetch('/send_data', {
+                      //     method: 'POST',
+                      //     headers: {
+                      //         'Content-Type': 'application/json'
+                      //     },
+                      //     body: JSON.stringify({ value: value })
+                      // })
+                      // .then(response => response.json())
+                      // .then(data => console.log('Success:', data))
+                      // .catch((error) => {
+                      //     console.error('Error:', error);
+                      // });
 
                       var geoJSON = routeData.toGeoJson();
                       displayRoute(geoJSON);
@@ -257,12 +257,10 @@
                         style="position: relative; height: 700px;">
                         
                         {% for quality,start_frame, end_frame in road_quality %}
-                        <li>The Road Quality from frame number {{ start_frame }} to {{ end_frame }} has <b>{{ quality }}. This is Road quality {{end_frame}}</b>.</li>
+                        <li>The Road Quality from frame number {{ start_frame }} to {{ end_frame }} has <b>{{ quality }}</b>.</li>
                         
                         
                         {% endfor %}
-                        
-                        <li>{{last_frame}}</li>
                         
 
 			<!-- AI code-->
