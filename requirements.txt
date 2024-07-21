@@ -6,3 +6,4 @@ werkzeung
 ultralytics
 pillow
 argparse
+gunicorn
