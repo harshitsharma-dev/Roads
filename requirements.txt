@@ -2,7 +2,7 @@ Flask
 opencv-python
 torch
 tensorflow
-werkzeung
+werkzeug
 ultralytics
 pillow
 argparse
