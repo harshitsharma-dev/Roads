@@ -139,7 +139,7 @@ def predict_img():
                 out.write(res_plotted)
                 # big.append(road_quality)
                 # print(big, 'This is big....................------------------------,,,,,,,,,,,,,,,,,,,,,,,')
-                name = send_data()
+                # name = send_data()
                 # print(name, 'This is name....................------------------------,,,,,,,,,,,,,,,,,,,,,,,')
                 fpm = road_quality[-1][-1] / request.args.get('value', 1)
                 print(request.args.get('value', 1), "This is .........................................................................")
