@@ -104,7 +104,7 @@ def predict_img():
                 img = cv2.imread(filepath)
 
                 # Perform the detection
-                model = YOLO(r'C:\Users\MUST LAB\INTERNS FOLDER\webAppMake\best.pt')
+                model = YOLO(r'..\best.pt')
                 detections =  model(img, save=True)
                 pothole = []
                 process_detections(detections, pothole)
@@ -125,7 +125,7 @@ def predict_img():
                 out = cv2.VideoWriter('output.mp4', fourcc, 30.0, (frame_width, frame_height))
                 
                 # initialize the YOLOv8 model here
-                model = YOLO(r'C:\Users\MUST LAB\INTERNS FOLDER\webAppMake\best.pt')
+                model = YOLO(r'..\best.pt')
                 big =  []                                                   
 
                 # do YOLOv9 detection on the frame here
