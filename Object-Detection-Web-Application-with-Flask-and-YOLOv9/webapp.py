@@ -72,15 +72,15 @@ def hello_world():
     return render_template('index.html')
 
 
-@app.route('/send_data', methods=['POST'])
-def send_data():
-    if request.is_json:
-        data = request.get_json()
-        value = data.get('value')
-        print(f'Received value: {value}')
-        return jsonify({'status': 'success', 'received_value': value})
-    else:
-        return jsonify({'status': 'error', 'message': 'Content-Type must be application/json'}), 415
+# @app.route('/send_data', methods=['POST'])
+# def send_data():
+#     if request.is_json:
+#         data = request.get_json()
+#         value = data.get('value')
+#         print(f'Received value: {value}')
+#         return jsonify({'status': 'success', 'received_value': value})
+#     else:
+#         return jsonify({'status': 'error', 'message': 'Content-Type must be application/json'}), 415
 
 
     
@@ -141,9 +141,9 @@ def predict_img():
                 # print(big, 'This is big....................------------------------,,,,,,,,,,,,,,,,,,,,,,,')
                 # name = send_data()
                 # print(name, 'This is name....................------------------------,,,,,,,,,,,,,,,,,,,,,,,')
-                fpm = road_quality[-1][-1] / request.args.get('value', 1)
-                print(request.args.get('value', 1), "This is .........................................................................")
-                return render_template("index.html", road_quality=road_quality, fpm=fpm)
+                # fpm = road_quality[-1][-1] / request.args.get('value', 1)
+                # print(request.args.get('value', 1), "This is .........................................................................")
+                return render_template("index.html", road_quality=road_quality)
                     # print(results)
                     # print(road_quality)
                     # cv2.waitKey(1)
